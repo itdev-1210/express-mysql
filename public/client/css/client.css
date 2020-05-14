@@ -1,0 +1,287 @@
+
+.logo_img {
+	width: 100%;
+	max-width: 188px;
+	min-width: 100px;
+}
+.header {
+	margin-top: 20px;
+}
+.content {
+	margin-top: 120px;
+	height: 550px;
+}
+.logo-txt {
+	width: 100% !important;
+}
+.explain-txt {
+	margin-top: 40px; 
+	font-size: 17px;
+}
+.btn-get-stared {
+	width: 50%;
+	height: 50px; 
+	font-size: 17px !important; 
+	margin-top: 40px;
+}
+.profile {
+	margin-top: 100px;
+}
+.profile-content {
+	width: 100%; 
+	height: 30px;
+}
+.subcription_area {
+	height: 450px; 
+	text-align: center;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+/* For mobile phones: */
+	[class*="col-"] {
+		width: 100%;
+		text-align: center;
+	}
+	.header {
+		margin-top: 30px;
+	}
+	.btn_head{
+		margin-top: 30px;
+	}
+	.content {
+		margin-top: 60px;
+		height: 550px;
+	}
+	.logo-txt {
+		width: 50%;
+		min-width: 100px;
+	}
+	.explain-txt {
+		margin-top: 30px; 
+		margin-left: 10px; 
+		margin-right: 10px; 
+		font-size: 17px;
+	}
+	.text-style-1 {
+		font-size: 18px; 
+		color: #f77032;
+	}
+	.text-style-2 {
+		margin-top: 10px; 
+		font-size: 15px
+	}
+	.input_email {
+		width: 70%; 
+		height: 40px; 
+		font-size: 130%; 
+		border-style: solid; 
+		border-width: 1px;
+		border-color: lightgrey;
+		border-radius: 25px;
+	}
+	.subscription_txt {
+		margin-top: 40px; 
+		font-size: 13px;
+	}
+	
+}
+
+@media (min-width:576px){
+	.user-img {
+		display: none;
+	}
+	.body {
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover auto;
+	}
+	.text-style-1 {
+		font-size: 18px; 
+		color: #f77032;
+	}
+	.text-style-2 {
+		margin-top: 10px; font-size: 13px
+	}
+	.input_email {
+		width: 100%; 
+		height: 40px; 
+		font-size: 150%; 
+		margin-top: 45px;
+		border-style: solid; 
+		border-width: 1px;
+		border-color: lightgrey;
+		border-radius: 25px;
+	}
+	.explain-txt {
+		margin-top: 30px; 
+		margin-left: 10px; 
+		margin-right: 10px; 
+		font-size: 15px;
+	}
+	.follow_us {
+		margin-left: 70px !important;
+	}
+	.subscription_txt {
+		margin-top: 40px; 
+		font-size: 14px;
+	}
+}
+
+@media (min-width:768px){ /*sm*/
+	.user-img {
+		display: none;
+	}
+	.body {
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover auto;
+		display: inline;
+	}
+	.text-style-1 {
+		font-size: 15px; 
+		color: #f77032;
+	}
+	.text-style-2 {
+		margin-top: 10px; 
+		font-size: 13px
+	}
+	.explain-txt {
+		margin-top: 30px; 
+		font-size: 15px;
+	}
+	.input_email {
+		width: 100%; 
+		height: 40px; 
+		font-size: 130%; 
+		margin-top: 45px;
+		border-style: solid; 
+		border-width: 1px;
+		border-color: lightgrey;
+		border-radius: 25px;
+	}
+	.follow_us {
+		margin-left: -15px !important;
+	}
+	.subscription_txt {
+		margin-top: 40px; 
+		font-size: 15px;
+	}
+}
+
+@media (min-width:992px){
+	.user-img {
+		display: inline;
+	}
+	.body {
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover auto;
+		display: inline;
+	}
+	.text-style-1 {
+		font-size: 15px; 
+		color: #f77032;
+	}
+	.text-style-2 {
+		margin-top: 10px; 
+		font-size: 13px;
+	}
+	.explain-txt {
+		margin-top: 30px; 
+		font-size: 17px;
+	}
+	.input_email {
+		width: 100%; 
+		height: 40px; 
+		font-size: 120%; 
+		margin-top: 45px;
+		border-style: solid; 
+		border-width: 1px;
+		border-color: lightgrey;
+		border-radius: 25px;
+	}
+	.follow_us {
+		margin-left: -15px !important;
+	}
+	.subscription_txt {
+		margin-top: 40px; 
+		font-size: 13px;
+	}
+}
+
+@media (min-width:1270px){
+	.body {
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover auto;
+		display: inline;
+	}
+	.text-style-1 {
+		font-size: 15px; 
+		color: #f77032;
+	}
+	.text-style-2 {
+		margin-top: 10px; 
+		font-size: 14px;
+	}
+	.explain-txt {
+		margin-top: 30px; 
+		font-size: 17px;
+	}
+	.input_email {
+		width: 100%; 
+		height: 40px; 
+		font-size: 150%; 
+		margin-top: 45px;
+		border-style: solid; 
+		border-width: 1px;
+		border-color: lightgrey;
+		border-radius: 25px;
+	}
+	.follow_us {
+		margin-left: -15px !important;
+	}
+	.subscription_txt {
+		margin-top: 40px; 
+		font-size: 15px;
+	}
+}
+@media (min-width:1650px){
+	.body {
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover auto;
+		display: inline;
+	}
+	.text-style-1 {
+		font-size: 18px; 
+		color: #f77032;
+	}
+	.text-style-2 {
+		margin-top: 10px; 
+		font-size: 15px;
+	}
+	.explain-txt {
+		margin-top: 30px; 
+		font-size: 17px;
+	}
+	.input_email {
+		width: 100%; 
+		height: 40px; 
+		font-size: 150%; 
+		margin-top: 45px;
+		border-style: solid; 
+		border-width: 1px;
+		border-color: lightgrey;
+		border-radius: 25px;
+	}
+	.follow_us {
+		margin-left: -15px !important;
+	}
+	.subscription_txt {
+		margin-top: 40px; 
+		font-size: 17px;
+	}
+}

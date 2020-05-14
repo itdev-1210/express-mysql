@@ -1,0 +1,83 @@
+extends template/layout.pug
+block body
+  body(style='background-image: url(/client/img/bg_login.png);')
+    .row
+      .col-md-12
+        header
+          .row.header
+            .col-md-1.col-sm-1
+            .col-md-3.col-sm-3
+              a.m-brand__logo-wrapper(href='#' style='width: 100%')
+                img.logo_img(src='/client/img/mark1.png' alt='')
+            .col-md-7.col-sm-7.btn_head(align='right')
+              button#btn_download.btn.m-btn--pill.btn-secondary.m-btn.m-btn--custom.m-btn--label-warning.m-btn--bolder.m-btn--uppercase(type='button' style='margin-right:30px;')
+                | DownLoad
+              span.m-nav__item.m-topbar__user-profile.m-topbar__user-profile--img.m-dropdown.m-dropdown--medium.m-dropdown--arrow.m-dropdown--header-bg-fill.m-dropdown--align-right.m-dropdown--mobile-full-width.m-dropdown--skin-light(m-dropdown-toggle='click')
+                a.m-nav__link.m-dropdown__toggle(href='#')
+                  span.m-topbar__userpic
+                    img.m--img-rounded.m--marginless.m--img-centered(src='/client/img/user1.png' alt='')
+                  span(style='font-size: 18px; color: white; margin-left: 10px ') 
+                    | #{fullname}
+                .m-dropdown__wrapper
+                  span.m-dropdown__arrow.m-dropdown__arrow--right.m-dropdown__arrow--adjust
+                  .m-dropdown__inner
+                    .m-dropdown__body
+                      .m-dropdown__content
+                        ul.m-nav.m-nav--skin-light
+                          li.m-nav__section.m--hide
+                            span.m-nav__section-text
+                              | Section
+                          li.m-nav__item
+                            a.m-nav__link(href='/profile')
+                              i.m-nav__link-icon.flaticon-profile
+                              span.m-nav__link-title
+                                span.m-nav__link-wrap
+                                  span.m-nav__link-text
+                                    | Profile
+                          li.m-nav__item
+                            a.m-nav__link(href='/download')
+                              i.m-nav__link-icon.flaticon-download
+                              span.m-nav__link-title
+                                span.m-nav__link-wrap
+                                  span.m-nav__link-text
+                                    | Download
+                          li.m-nav__item
+                            a.m-nav__link(href='/subscription')
+                              i.m-nav__link-icon.flaticon-piggy-bank
+                              span.m-nav__link-title
+                                span.m-nav__link-wrap
+                                  span.m-nav__link-text
+                                    | Subscription
+                          li.m-nav__item
+                            a.m-nav__link(href='/changepassword')
+                              i.m-nav__link-icon.flaticon-lock-1
+                              span.m-nav__link-title
+                                span.m-nav__link-wrap
+                                  span.m-nav__link-text
+                                    | Change Password
+                          li.m-nav__separator.m-nav__separator--fit
+                          li.m-nav__item
+                            a.btn.m-btn--pill.btn-secondary.m-btn.m-btn--custom.m-btn--label-brand.m-btn--bolder(href='/logout')
+                              | Logout
+            .col-md-1.col-sm-1
+        // begin::Body
+        content
+          .row.content
+            .col-md-1.col-sm-1
+            .col-md-4.col-sm-12
+              img(clsss='logo-txt' src='/client/img/txt1.png' alt='')
+              p.explain-txt
+                | I am looking to have developed a Microsoft only based software
+                | agent that helps repair machines. This agent will be provided
+                | via website/licensing. The agent will be responsible for secure
+                | communication between server database and reporting issues
+                | and downloading and applying fixes, Let me know if this peaks
+                | your interested. I would love to go into detail about it.
+              button#btn_get_started.btn.m-btn--pill.m-btn.m-btn--gradient-from-danger.m-btn--gradient-to-warning.btn-get-stared(type='button')
+                | Get Started
+            .col-md-4.col-sm-4
+            .col-md-1.col-sm-1
+          // begin::Footer
+          include template/layout_footer.pug
+block script
+  script(src='/client/js/dashboard.js' type='text/javascript')

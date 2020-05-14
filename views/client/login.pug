@@ -1,0 +1,140 @@
+extends template/layout.pug
+block body
+  body(style='background-image: url(/client/img/bg_login.png);')
+    .row
+      .col-md-12
+        header
+          .row.header
+            .col-md-1.col-sm-1
+            .col-md-3.col-sm-3
+              a.m-brand__logo-wrapper(href='#' style='width: 100%')
+                img.logo_img(src='/client/img/mark1.png' alt='')
+            .col-md-7.col-sm-7.btn_head(align='right')
+              button#btn_login.btn.m-btn--pill.btn-secondary.m-btn.m-btn--custom.m-btn--label-warning.m-btn--bolder.m-btn--uppercase(type='button' style='margin-left: 10px' data-toggle='modal' data-target='#signinModal')
+                | Log In
+            .col-md-1.col-sm-1
+        // begin::Body
+        content
+          .row.content
+            .col-md-1.col-sm-1
+            .col-md-4.col-sm-12
+              img(clsss='logo-txt' src='/client/img/txt1.png' alt='')
+              p.explain-txt
+                | I am looking to have developed a Microsoft only based software
+                | agent that helps repair machines. This agent will be provided
+                | via website/licensing. The agent will be responsible for secure
+                | communication between server database and reporting issues
+                | and downloading and applying fixes, Let me know if this peaks
+                | your interested. I would love to go into detail about it.
+              button#btn_get_started.btn.m-btn--pill.m-btn.m-btn--gradient-from-danger.m-btn--gradient-to-warning.btn-get-stared(type='button')
+                | Get Started
+            .col-md-4.col-sm-4
+            .col-md-1.col-sm-1
+          // begin::Login Dialog
+          #signinModal.modal.fade(style='top: 25%;  position: absolute;')
+            .modal-dialog
+              .modal-content
+                .row
+                  .col-md-3.col-sm-3
+                  .col-md-36.col-sm-6(style='padding-top: 40px; text-align: center')
+                    img(src='/client/img/txt_signin.png' alt='' style='width: 60%')
+                  .col-md-3.col-sm-3(style='padding-right: 20px;')
+                    button.close(type='button' data-dismiss='modal' aria-hidden='true') &times;
+                .row.modal-body
+                  .col-md-1.col-sm-1
+                  .col-md-10.col-sm-10
+                    .m-login__signin
+                      form.m-login__form.m-form(style='width:100%' action='')
+                        .form-group.m-form__group
+                          div(style='height: 40px; margin-top: 10px; border-style: solid; border-width: 1px;border-color: lightgrey; border-radius: 25px;')
+                            input.btn.m-btn--pill.m-btn--gradient-to-warning(type='input' placeholder='Email' name="email" autocomplete='off' style=' width: 100%;height: 100%; font-size: 100%;text-align: left')
+                        .form-group.m-form__group
+                          div(style='height: 40px;border-style: solid; border-width: 1px;border-color: lightgrey; border-radius: 25px;')
+                            input.btn.m-btn--pill.m-btn--gradient-to-warning(type='password' placeholder='Password' name='password' style='width: 100%;height: 100%; font-size: 100%;text-align: left')
+                        .row.m-login__form-sub
+                          .col.m--align-left
+                            label.m-checkbox.m-checkbox--focus
+                          .col.m--align-right
+                            a#m_login_forget_password.m-link(href='javascript:;')
+                              p(style='text-align: right; color:#ffad00;size: 15px;') forgot password
+                        .row
+                          .col-md-3.col-sm-1
+                          .col-md-6.col-sm-6(style='text-align: center')
+                            button#m_login_signin_submit.btn.m-btn--pill.m-btn--gradient-from-danger(type='button' style='width: 80%; height: 40px; font-size: 100%;background:#ffad00;margin-top: 30px ')
+                              | Sign In
+                          .col-md-3.col-sm-1
+                        .m-stack__item.m-stack__item--center(style='margin-top: 30px; text-align: center')
+                          .m-login__account
+                            a#m_new_account.m-link.m-link--focus.m-login__account-link(href='javascript:;')
+                              p(style='color:#f77032;') No Account?  Register New Account
+                  .col-md-1.col-sm-1
+          // finish::Login Dialog
+          // begin::signup Dialog
+          #signupModal.modal.fade(style='top: 25%;  position: absolute; ')
+            .modal-dialog
+              .modal-content
+                .row
+                  .col-md-3.col-sm-3
+                  .col-md-36.col-sm-6(style='padding-top: 30px; text-align: center')
+                    img(src='/client/img/txt_signup.png' alt='' style='width: 60%')
+                  .col-md-3.col-sm-3(style='padding-right: 20px;')
+                    button.close(type='button' data-dismiss='modal' aria-hidden='true') &times;
+                .row.modal-body
+                  .col-md-1.col-sm-1
+                  .col-md-10.col-sm-10
+                    form.m-login__form.m-form(style='width:100%' action='')
+                      .form-group.m-form__group
+                        div(style='height: 40px;border-style: solid; border-width: 1px;border-color: lightgrey; border-radius: 25px;')
+                          input.btn.m-btn--pill.m-btn--gradient-to-warning(type='text' placeholder='Fullname' name='fullname' style='width: 100%;height: 100%; font-size: 100%;text-align: left')
+                      .form-group.m-form__group
+                        div(style='height: 40px; border-style: solid; border-width: 1px;border-color: lightgrey; border-radius: 25px;')
+                          input.btn.m-btn--pill.m-btn--gradient-to-warning(type='input' placeholder='Email' name="email" autocomplete='off' style=' width: 100%;height: 100%; font-size: 100%;text-align: left')
+                      .form-group.m-form__group
+                        div(style='height: 40px;border-style: solid; border-width: 1px;border-color: lightgrey; border-radius: 25px;')
+                          input.btn.m-btn--pill.m-btn--gradient-to-warning(type='password' placeholder='Password' name='password' style='width: 100%;height: 100%; font-size: 100%;text-align: left')
+                      .form-group.m-form__group
+                        div(style='height: 40px;border-style: solid; border-width: 1px;border-color: lightgrey; border-radius: 25px;')
+                          input.btn.m-btn--pill.m-btn--gradient-to-warning(type='password' placeholder='Confirm Password' name='rpassword' style='width: 100%;height: 100%; font-size: 100%;text-align: left')
+                      .row
+                        .col-md-3.col-sm-1
+                        .col-md-6.col-sm-6(style='text-align: center')
+                          button#m_login_signup_submit.btn.m-btn--pill.m-btn--gradient-from-danger(type='button' style='width: 80%; height: 40px; font-size: 100%;background:#ffad00;margin-top: 30px ')
+                            | Sign Up
+                        .col-md-3.col-sm-1
+                      .row
+                        a#m_to_signin1(href='')
+                          | &lt; Sign In
+                  .col-md-1.col-sm-1
+          // finish::signup Dialog
+          // begin::forgetpassword Dialog
+          #forgetpassModal.modal.fade(style='top: 25%;  position: absolute; ')
+            .modal-dialog
+              .modal-content
+                .row
+                  .col-md-3.col-sm-3
+                  .col-md-6.col-sm-6(style='padding-top: 30px; text-align: center')
+                    img(src='/client/img/txt_forgot.png' alt='' style='width: 80%')
+                  .col-md-3.col-sm-3(style='padding-right: 20px;')
+                    button.close(type='button' data-dismiss='modal' aria-hidden='true') &times;
+                .row.modal-body
+                  .col-md-1.col-sm-1
+                  .col-md-10.col-sm-10
+                    form.m-login__form.m-form(style='width:100%' action='')
+                      .form-group.m-form__group
+                        div(style='height: 40px; border-style: solid; border-width: 1px;border-color: lightgrey; border-radius: 25px;')
+                          input.btn.m-btn--pill.m-btn--gradient-to-warning(type='input' id="email" placeholder='Email' name="email" autocomplete='off' style=' width: 100%;height: 100%; font-size: 100%;text-align: left')
+                      .row
+                        .col-md-3.col-sm-1
+                        .col-md-6.col-sm-6(style='text-align: center')
+                          button#btn_forgetpassword_request.btn.m-btn--pill.m-btn--gradient-from-danger(type='button' style='width: 80%; height: 40px; font-size: 100%;background:#ffad00;margin-top: 30px ')
+                            | Request
+                        .col-md-3.col-sm-1
+                      .row
+                        a#m_to_signin2(href='')
+                          | &lt; Sign In
+                  .col-md-1.col-sm-1
+          // finish::forgetpassword Dialog
+          // begin::Footer
+          include template/layout_footer.pug
+block script
+  script(src='/client/js/login.js' type='text/javascript')

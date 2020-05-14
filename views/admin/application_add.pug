@@ -1,0 +1,55 @@
+extends template/layout.pug
+
+block content
+ .m-content
+    // begin::table
+    .m-portlet
+      .m-portlet__head
+        .m-portlet__head-caption
+          .m-portlet__head-title
+            span.m-portlet__head-icon.m--hide
+              i.la.la-gear
+            h3.m-portlet__head-text
+              | Add New Application
+      // begin::Form
+      form#addApplication.m-form.m-form--fit.m-form--label-align-right.m-form--group-seperator-dashed
+        .m-portlet__body
+          .form-group.m-form__group.row
+            label.col-lg-2.col-form-label
+              | Name:
+            .col-lg-3
+              input.form-control.m-input(type='text' placeholder='Enter App Name' name='name' )
+              span.m-form__help
+                |  
+            label.col-lg-2.col-form-label
+              | Version:
+            .col-lg-3
+              input.form-control.m-input(type='text' placeholder='Enter App version' name='version')
+              span.m-form__help
+                | 
+          .form-group.m-form__group.row
+            label.col-lg-2.col-form-label
+              | Link:
+            .col-lg-8
+              input.form-control.m-input(type='text' placeholder='Enter App Link' name='link')
+              span.m-form__help
+                | 
+          .form-group.m-form__group.row
+            label.col-lg-2.col-form-label
+              | Description:
+            .col-lg-8
+              .m-input-icon.m-input-icon--right
+                textarea#file_description.form-control.m-input.m-input--air(rows='10' name='description')
+                      | 
+              span.m-form__help
+                | Please enter description
+        .m-portlet__foot.m-portlet__no-border.m-portlet__foot--fit
+          .m-form__actions.m-form__actions--solid
+            .row
+              .col-lg-9
+              .col-lg-3
+                button#btn_add_app.btn.btn-success(type="submit")
+                  | Add App
+
+block data_script
+  script(src='/admin/js/data-add-application.js' type='text/javascript')

@@ -1,0 +1,47 @@
+span.m-nav__item.m-topbar__user-profile.m-topbar__user-profile--img.m-dropdown.m-dropdown--medium.m-dropdown--arrow.m-dropdown--header-bg-fill.m-dropdown--align-right.m-dropdown--mobile-full-width.m-dropdown--skin-light(m-dropdown-toggle='click')
+  a.m-nav__link.m-dropdown__toggle(href='#')
+    span.m-topbar__userpic
+      img.m--img-rounded.m--marginless.m--img-centered(src='/client/img/user2.png' alt='')
+    span(style='font-size: 18px; color: #f77032; margin-left: 10px ') 
+      | #{fullname}
+  .m-dropdown__wrapper
+    span.m-dropdown__arrow.m-dropdown__arrow--right.m-dropdown__arrow--adjust
+    .m-dropdown__inner
+      .m-dropdown__body
+        .m-dropdown__content
+          ul.m-nav.m-nav--skin-light
+            li.m-nav__section.m--hide
+              span.m-nav__section-text
+                | Section
+            li.m-nav__item
+              a.m-nav__link(href='/profile')
+                i.m-nav__link-icon.flaticon-profile
+                span.m-nav__link-title
+                  span.m-nav__link-wrap
+                    span.m-nav__link-text
+                      | Profile
+            li.m-nav__item
+              a.m-nav__link(href='/download')
+                i.m-nav__link-icon.flaticon-download
+                span.m-nav__link-title
+                  span.m-nav__link-wrap
+                    span.m-nav__link-text
+                      | Download
+            li.m-nav__item
+              a.m-nav__link(href='/subscription')
+                i.m-nav__link-icon.flaticon-piggy-bank
+                span.m-nav__link-title
+                  span.m-nav__link-wrap
+                    span.m-nav__link-text
+                      | Subscription
+            li.m-nav__item
+              a.m-nav__link(href='/changepassword')
+                i.m-nav__link-icon.flaticon-lock-1
+                span.m-nav__link-title
+                  span.m-nav__link-wrap
+                    span.m-nav__link-text
+                      | Change Password
+            li.m-nav__separator.m-nav__separator--fit
+            li.m-nav__item
+              a.btn.m-btn--pill.btn-secondary.m-btn.m-btn--custom.m-btn--label-brand.m-btn--bolder(href='/logout')
+                | Logout

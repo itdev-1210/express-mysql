@@ -1,0 +1,55 @@
+extends template/layout.pug
+block body
+  body(style='background-image: url(/client/img/bg_download.png);')
+    .row
+      .col-md-12
+        header
+          .row.header
+            .col-md-1.col-sm-1
+            .col-md-3.col-sm-3
+              a.m-brand__logo-wrapper(href='/dashboard' style='width: 100%')
+                img.logo_img(src='/client/img/mark2.png' alt='')
+            .col-md-7.col-sm-7.btn_head(align='right')
+              include template/layout_menu.pug
+            .col-md-1.col-sm-1
+        content
+          .row.content
+            .col-md-1.col-sm-1
+            .col-md-3.col-sm-12
+              img(clsss='logo-txt' src='/client/img/txt2.png' alt='')
+            .col-md-4.col-sm-12.subcription_area
+              p(style='margin-top: 160px; font-size: 17px;')
+                | The file is protected by admin. We will send the download link via Email. Please click the
+                br
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;button to get the download link.
+              p(style='margin-top: 50px; font-size: 17px;')
+                | The link would be available for 24 hours.
+              button#btn_getlink.btn.m-btn--pill.m-btn.m-btn--gradient-from-danger.m-btn--gradient-to-warning(type='button' style='width: 120px;height: 50px; font-size: 120%; margin-top: 40px;')
+                | Get Link
+            .col-md-1.col-sm-1
+            // begin::forgetpassword Dialog
+          #noFileMessage.modal.fade(style='top: 25%;  position: absolute; ')
+            .modal-dialog
+              .modal-content
+                .row
+                  .col-md-3.col-sm-3
+                  .col-md-6.col-sm-6(style='padding-top: 30px; text-align: center')
+                    span File not exist.
+                  .col-md-3.col-sm-3(style='padding-right: 20px;')
+                    button.close(type='button' data-dismiss='modal' aria-hidden='true') &times;
+                .row.modal-body
+                  .col-md-1.col-sm-1
+                  .col-md-10.col-sm-10
+                    form.m-login__form.m-form(style='width:100%' action='')
+                      .row
+                        .col-md-3.col-sm-1
+                        .col-md-6.col-sm-6(style='text-align: center')
+                          button#btn_ok.btn.m-btn--pill.m-btn--gradient-from-danger(type='button' style='width: 80%; height: 40px; font-size: 100%;background:#ffad00;margin-top: 30px ')
+                            | OK
+                        .col-md-3.col-sm-1
+                  .col-md-1.col-sm-1
+          // finish::forgetpassword Dialog
+          include template/layout_footer.pug
+
+block script
+  script(src='/client/js/download.js' type='text/javascript')

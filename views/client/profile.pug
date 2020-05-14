@@ -1,0 +1,53 @@
+extends template/layout.pug
+block body
+  body(style='background-image: url(/client/img/bg_profile.png);')
+    .row
+      .col-md-12
+        // begin::Header
+        header
+          .row.header
+            .col-md-1.col-sm-1
+            .col-md-3.col-sm-3
+              a.m-brand__logo-wrapper(href='/dashboard' style='width: 100%')
+                img.logo_img(src='/client/img/mark2.png' alt='')
+            .col-md-7.col-sm-7.btn_head(align='right')
+              button#btn_download.btn.m-btn--pill.btn-secondary.m-btn.m-btn--custom.m-btn--label-warning.m-btn--bolder.m-btn--uppercase(type='button' style='margin-right:30px;')
+                  | DownLoad
+              include template/layout_menu.pug
+            .col-md-1.col-sm-1
+        // end::Header
+        // begin::Body
+        content
+          .row.content
+            .col-md-1.col-sm-1
+            .col-md-3.col-sm-12
+              img(clsss='logo-txt' src='/client/img/txt_profile.png' alt='')
+            .col-md-4.col-sm-12.profile
+              .row.profile-content
+                span.col-md-5 Name:
+                span.col-md-7 #{fullname}
+              .row.profile-content
+                span.col-md-5 Username:
+                span.col-md-7 #{fullname}
+              .row.profile-content
+                span.col-md-5 Password:
+                span.col-md-2 ********
+                a.m-nav__link(href='/changepassword')
+                  span.col-md-5(style='color: #f77032;font-size: 13px') Update Password
+              .row.profile-content
+                span.col-md-5 Email:
+                span.col-md-7 #{email}
+              .row.profile-content
+                span.col-md-5 Expired Date:
+                - var expire = new Date(expired);
+                span.col-md-7 #{expire.toISOString().substr(0,10)}
+              .row.profile-content
+                span.col-md-5 Payment Information:
+                span#payment.col-md-7 
+              div(style='text-align: center')
+                button#btn_ok.btn.m-btn--pill.m-btn.m-btn--gradient-from-danger.m-btn--gradient-to-warning(type='button' style='width: 100px;height: 40px; margin-top: 40px;')
+                  | OK
+            .col-md-1.col-sm-1
+          include template/layout_footer.pug
+block script
+  script(src='/client/js/profile.js' type='text/javascript')

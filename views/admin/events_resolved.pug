@@ -1,0 +1,25 @@
+extends template/layout.pug
+
+block content
+ .m-content
+    .m-portlet.m-portlet--mobile
+      .m-portlet__head
+        .m-portlet__head-caption
+          .m-portlet__head-title
+            h3.m-portlet__head-text
+              | Resolved Events
+      .m-portlet__body
+        .m-form.m-form--label-align-right.m--margin-top-20.m--margin-bottom-30
+          .row.align-items-center
+            .col-xl-8.order-2.order-xl-1
+              .form-group.m-form__group.row.align-items-center
+                .col-md-4
+                  .m-input-icon.m-input-icon--left
+                    input#generalSearch.form-control.m-input.m-input--solid(type='text' placeholder='Search...')
+                    span.m-input-icon__icon.m-input-icon__icon--left
+                      span
+                        i.la.la-search
+        .m_data_events
+
+block data_script
+  script(src='/admin/js/data-re-events.js' type='text/javascript')

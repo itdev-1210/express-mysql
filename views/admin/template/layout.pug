@@ -1,0 +1,160 @@
+doctype html
+head
+  meta(charset='utf-8')
+  title
+    | #{title}
+  meta(name='description' content='Latest updates and statistic charts')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
+
+  script(src='https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js')
+  script.
+    WebFont.load({
+    google: {"families":["Poppins:300,400,500,600,700","Roboto:300,400,500,600,700"]},
+    active: function() {
+    sessionStorage.fonts = true;
+    }
+    });
+
+  link(href='/common/vendors/base/vendors.bundle.css' rel='stylesheet' type='text/css')
+  link(href='/common/demo/default/base/style.bundle.css' rel='stylesheet' type='text/css')
+  link(rel='shortcut icon' href='/common/demo/default/media/img/logo/favicon.ico')
+
+header#m_header.m-grid__item.m-header(m-minimize-offset='200' m-minimize-mobile-offset='200')
+  .m-container.m-container--fluid.m-container--full-height
+    .m-stack.m-stack--ver.m-stack--desktop
+      // BEGIN: Brand
+      .m-stack__item.m-brand.m-brand--skin-dark
+        .m-stack.m-stack--ver.m-stack--general
+          .m-stack__item.m-stack__item--middle.m-brand__logo
+            a.m-brand__logo-wrapper(href='/admin/dashboard')
+              img(alt='' src='/common/demo/default/media/img/logo/logo.png')
+          .m-stack__item.m-stack__item--middle.m-brand__tools
+            a#m_aside_left_minimize_toggle.m-brand__icon.m-brand__toggler.m-brand__toggler--left.m--visible-desktop-inline-block(href='javascript:;')
+              span
+            a#m_aside_left_offcanvas_toggle.m-brand__icon.m-brand__toggler.m-brand__toggler--left.m--visible-tablet-and-mobile-inline-block(href='javascript:;')
+              span
+            a#m_aside_header_menu_mobile_toggle.m-brand__icon.m-brand__toggler.m--visible-tablet-and-mobile-inline-block(href='javascript:;')
+              span
+            a#m_aside_header_topbar_mobile_toggle.m-brand__icon.m--visible-tablet-and-mobile-inline-block(href='javascript:;')
+              i.flaticon-more
+      #m_header_nav.m-stack__item.m-stack__item--fluid.m-header-head
+        #m_header_topbar.m-topbar.m-stack.m-stack--ver.m-stack--general
+          .m-stack__item.m-topbar__nav-wrapper
+            ul.m-topbar__nav.m-nav.m-nav--inline
+              li.m-nav__item.m-topbar__user-profile.m-topbar__user-profile--img.m-dropdown.m-dropdown--medium.m-dropdown--arrow.m-dropdown--header-bg-fill.m-dropdown--align-right.m-dropdown--mobile-full-width.m-dropdown--skin-light(m-dropdown-toggle='click')
+                a.m-nav__link.m-dropdown__toggle(href='#')
+                  span.m-topbar__userpic
+                    img.m--img-rounded.m--marginless.m--img-centered(src='/admin/img/user2.png' alt='')
+                  span.m-topbar__username.m--hide(style='font-size: 18px; color: #f77032; margin-left: 30px;!important ') 
+                    | #{fullname}
+                .m-dropdown__wrapper
+                  span.m-dropdown__arrow.m-dropdown__arrow--right.m-dropdown__arrow--adjust
+                  .m-dropdown__inner
+                    .m-dropdown__header.m--align-center(style='background: url(/common/app/media/img/misc/user_profile_bg.jpg); background-size: cover;')
+                      .m-card-user.m-card-user--skin-dark
+                        .m-card-user__pic
+                          img.m--img-rounded.m--marginless(src='/admin/img/user1.png' alt='')
+                        .m-card-user__details
+                          span.m-card-user__name.m--font-weight-500
+                            | #{fullname}
+                          a.m-card-user__email.m--font-weight-300.m-link(href='')
+                            | #{email}
+                    .m-dropdown__body
+                      .m-dropdown__content
+                        ul.m-nav.m-nav--skin-light
+                          li.m-nav__section.m--hide
+                            span.m-nav__section-text
+                              | Section
+                          li.m-nav__separator.m-nav__separator--fit
+                          li.m-nav__item
+                            a.btn.m-btn--pill.btn-secondary.m-btn.m-btn--custom.m-btn--label-brand.m-btn--bolder(href='/admin/logout')
+                              | Logout
+.m-grid.m-grid--hor.m-grid--root.m-page
+  .m-grid__item.m-grid__item--fluid.m-grid.m-grid--ver-desktop.m-grid--desktop.m-body
+    // BEGIN: Left Aside
+    button#m_aside_left_close_btn.m-aside-left-close.m-aside-left-close--skin-dark
+      i.la.la-close
+    #m_aside_left.m-grid__item.m-aside-left.m-aside-left--skin-dark
+      // BEGIN: Aside Menu
+      #m_ver_menu.m-aside-menu.m-aside-menu--skin-dark.m-aside-menu--submenu-skin-dark(m-menu-vertical='1' m-menu-scrollable='0' m-menu-dropdown-timeout='500')
+        ul.m-menu__nav.m-menu__nav--dropdown-submenu-arrow
+          li.m-menu__item(aria-haspopup='true')
+            a.m-menu__link(href='/admin/dashboard')
+              i.m-menu__link-icon.flaticon-line-graph
+              span.m-menu__link-title
+                span.m-menu__link-wrap
+                  span.m-menu__link-text
+                    | Dashboard
+          li.m-menu__item.m-menu__item--submenu(aria-haspopup='true')
+            a.m-menu__link(href='/admin/users')
+              i.m-menu__link-icon.flaticon-avatar
+              span.m-menu__link-title
+                span.m-menu__link-wrap
+                  span.m-menu__link-text
+                    | Users
+          li.m-menu__item.m-menu__item--submenu(aria-haspopup='true')
+            a.m-menu__link(href='/admin/applications_all')
+              i.m-menu__link-icon.flaticon-app
+              span.m-menu__link-title
+                span.m-menu__link-wrap
+                  span.m-menu__link-text
+                    | Applicatons
+          //- - if (title == 'All Events') {
+          //- li.m-menu__item.m-menu__item--submenu.m-menu__item--open.m-menu__item--expanded(aria-haspopup='true' m-menu-submenu-toggle='hover') 
+          //- - } else {
+          //- li.m-menu__item.m-menu__item--submenu(aria-haspopup='true' m-menu-submenu-toggle='hover') 
+          //- -}
+          li.m-menu__item.m-menu__item--submenu.m-menu__item--open.m-menu__item--expanded(aria-haspopup='true' m-menu-submenu-toggle='hover') 
+            a.m-menu__link.m-menu__toggle(href='javascript:;')
+              i.m-menu__link-icon.flaticon-notes
+              span.m-menu__link-text
+                | Events
+              i.m-menu__ver-arrow.la.la-angle-right
+            .m-menu__submenu
+              span.m-menu__arrow
+              ul.m-menu__subnav
+                li.m-menu__item.m-menu__item--parent(aria-haspopup='true')
+                  span.m-menu__link
+                    span.m-menu__link-text
+                      | Base
+                li.m-menu__item(aria-haspopup='true')
+                  a.m-menu__link(href='/admin/events_all')
+                    i.m-menu__link-bullet.m-menu__link-bullet--dot
+                      span
+                    span.m-menu__link-text
+                      | All
+                li.m-menu__item(aria-haspopup='true')
+                  a.m-menu__link(href='/admin/events_resolved')
+                    i.m-menu__link-bullet.m-menu__link-bullet--dot
+                      span
+                    span.m-menu__link-text
+                      | Resolved Events
+                li.m-menu__item(aria-haspopup='true')
+                  a.m-menu__link(href='/admin/events_unresolved')
+                    i.m-menu__link-bullet.m-menu__link-bullet--dot
+                      span
+                    span.m-menu__link-text
+                      | Unresolved Events
+          li.m-menu__item.m-menu__item--submenu(aria-haspopup='true')
+            a.m-menu__link(href='/admin/settings')
+              i.m-menu__link-icon.flaticon-cogwheel-1
+              span.m-menu__link-title
+                span.m-menu__link-wrap
+                  span.m-menu__link-text
+                    | Settings
+    .m-grid__item.m-grid__item--fluid.m-wrapper
+
+      block content
+      
+  include layout_footer.pug
+
+#m_scroll_top.m-scroll-top
+  i.la.la-arrow-up
+
+script(src='/common/vendors/base/vendors.bundle.js' type='text/javascript')
+script(src='/common/demo/default/base/scripts.bundle.js' type='text/javascript')
+script(src='/common/app/js/dashboard.js' type='text/javascript')
+
+block data_script
+
